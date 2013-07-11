@@ -13,5 +13,7 @@ public class ExampleApplication extends Application {
 		super.onCreate();
 		final String moblicoAPIKey = "1c1202b6-7a36-4451-ba32-fe57f9a6c8d4";
 		ServiceManager.services().init(this, moblicoAPIKey, Environment.PRODUCTION, 4);
+		// This is typically removed when the app is ready to be deployed.
+		ServiceManager.services().enableLogging(true);
 	}
 }

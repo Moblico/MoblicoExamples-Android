@@ -4,15 +4,6 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical" >
-    
-    <TextView android:id="@+id/txtUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textIsSelectable="false"
-        android:layout_margin="5dip"
-        android:text="User Name: \n\n"/>
 
     <TextView android:id="@+id/txtRegResult"
         android:layout_width="wrap_content"
@@ -26,7 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:enabled="false"
         android:layout_margin="5dip"/>
 
 </LinearLayout>

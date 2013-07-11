@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.NotificationCompat;
 
 public class PushReceiver extends BroadcastReceiver {
 	private static int count = 1;
@@ -28,7 +29,7 @@ public class PushReceiver extends BroadcastReceiver {
 				PendingIntent pendingIntent = PendingIntent.getActivity(
 						context, 0, notificationIntent, 0);
 
-				Notification note = new Notification.Builder(context)
+				Notification note = new NotificationCompat.Builder(context)
 						.setContentTitle("App Notification")
 						.setContentText(msg).setContentIntent(pendingIntent)
 						.setSmallIcon(R.drawable.ic_launcher)
