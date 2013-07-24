@@ -2,5 +2,5 @@
 <resources>
 
     <string name="app_name">Moblico SDK Push Example</string>
-
+	<string name="btnRegister_text">Register</string>
 </resources>

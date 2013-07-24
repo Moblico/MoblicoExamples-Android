@@ -1,5 +1,7 @@
 package com.moblico.example.push;
 
+import com.moblico.services.PushServices;
+
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -13,8 +15,13 @@ public class PushReceiver extends BroadcastReceiver {
 	private static int count = 1;
 
 	@Override
-	public void onReceive(Context context, Intent intent) {
+	public void onReceive(Context context, Intent intent) {		   
 		if (intent != null && intent.getExtras() != null) {
+			String regId = intent.getExtras().getString("registration_id");
+			if(regId != null && !regId.equals("")) {
+				PushServices.setRegistrationId(context, regId);
+			}
+
 			String msg = intent.getExtras().getString("message");
 			if (msg != null) {
 				setResultCode(Activity.RESULT_OK);
